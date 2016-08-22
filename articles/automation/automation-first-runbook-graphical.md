@@ -49,7 +49,7 @@ The Library control on the left side of the editor allows you to select activiti
 
 1.	In the Library control, click in the search textbox and type **Write-Output**.  The search results will be displayed below. <br> ![Microsoft.PowerShell.Utility](media/automation-first-runbook-graphical/search-powershell-cmdlet-writeoutput.png)
 2.	Scroll down to the bottom of the list.  You can either right click **Write-Output** and select **Add to canvas** or click on the ellipse next to the cmdlet and then select **Add to canvas**.
-3.	Click on the **Write-Output** activity on the canvas.  This opens the Configuration control blade which allows you to configure the activity.
+3.	Click on the **Write-Output** activity on the canvas.  This opens the Configuration control blade which allows you to configure the activity.c
 4.	The **Label** defaults to the name of the cmdlet, but we can change it to something more friendly. Change it to *Write Hello World to output*.
 5.	Click **Parameters** to provide values for the cmdlet's parameters.  
 	Some cmdlets have multiple parameter sets, and you need to select which you will use. In this case, **Write-Output** has only one parameter set, so you don't need to select one. <br> ![Write-Output properties](media/automation-first-runbook-graphical/write-output-properties-b.png)
@@ -135,7 +135,7 @@ Your runbook should look like the following at this point: <br>![Runbook authent
 We'll now add a **Start-AzureRmVM** activity to start a virtual machine.  You can pick any virtual machine in your Azure subscription, and for now we'll be hardcoding that name into the cmdlet.
 
 1. In the Library control, type **Start-AzureRm** in the search textbox.
-2. Add **Start-AzureRmVM** to the canvas and then click and drag it underneath **Connect to Azure**.
+2. Add **Start-AzureRmVM** to the canvas and then click and drag it underneath **Specify Subscription Id**.
 3. Hover over **Specify Subscription Id** until a circle appears on the bottom of the shape.  Click the circle and drag the arrow to **Start-AzureRmVM**. 
 4.	Select **Start-AzureRmVM**.  Click **Parameters** and then **Parameter Set** to view the sets for **Start-AzureRmVM**.  Select the **ResourceGroupNameParameterSetName** parameter set. Note that **ResourceGroupName** and **Name** have exclamation points next them.  This indicates that they are required parameters.  Also note both expect string values.
 5.	Select **Name**.  Select **PowerShell expression** for the **Data source** and type in the name of the virtual machine surrounded with double quotes that we will start with this runbook.  Click **OK**.<br>![Start-AzureRmVM Name Parameter Value](media/automation-first-runbook-graphical/runbook-startvm-nameparameter.png)
